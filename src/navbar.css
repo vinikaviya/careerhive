@@ -1,0 +1,147 @@
+
+
+
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+   .home-image{
+    background-image: url('./images/home1.jpg');
+  background-size: cover;
+  display: flex;
+  height: 100%;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  }
+
+  .home-h1{
+   
+
+    position: fixed;
+  margin-top: 10%;
+  margin-left: 50%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  animation: slideIn 1s ease forwards;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  
+  }
+
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-70%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  
+
+.home-p{
+  
+
+  justify-content: center;
+  display: flex;
+  margin-left: 48%;
+  margin-right: 10%;
+  margin-top: 18%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+  :root {
+    --primary-color:green;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+  }
+  
+  .home-button {
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    /* padding: 1em 1.8em; */
+    padding: 10%;
+    width: 150%;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    margin-left: 1400%;
+    margin-top: 10%;
+  }
+
+  .no-link-style {
+    text-decoration: none; 
+    color: inherit; 
+  }
+  
+  
+  .home-button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  .home-button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  .home-button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .home-button:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  .home-button:hover .arrow::before {
+    right: 0;
+  }
+  
+
+
